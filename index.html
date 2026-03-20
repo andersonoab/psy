@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assessment Sonova | Entrevista Estruturada</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">Assessment comportamental estruturado</div>
+        <h1>Interview Journey</h1>
+        <p class="hero-copy">
+          Aplicação guiada para recrutador e candidato, com leitura comportamental estruturada,
+          tags ATS e resumo executivo final.
+        </p>
+      </div>
+      <div class="hero-badge">
+        <span>Paleta Sonova</span>
+        <strong>Azul claro + Laranja</strong>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card main-panel">
+        <div class="section-head">
+          <div>
+            <h2>Identificação da sessão</h2>
+            <p>Preencha os dados iniciais antes de iniciar a aplicação.</p>
+          </div>
+          <div class="pill">Modo recrutador</div>
+        </div>
+
+        <div class="grid two">
+          <label>
+            <span>Candidato</span>
+            <input id="candidateName" type="text" placeholder="Nome do candidato" />
+          </label>
+          <label>
+            <span>Recrutador</span>
+            <input id="recruiterName" type="text" placeholder="Seu nome" />
+          </label>
+          <label>
+            <span>Perfil da vaga</span>
+            <input id="jobProfile" type="text" placeholder="Ex.: Payroll / DP / RH Generalista" />
+          </label>
+          <label>
+            <span>Decisão preliminar</span>
+            <select id="preDecision">
+              <option value="Em análise">Em análise</option>
+              <option value="Aprovado com ressalvas">Aprovado com ressalvas</option>
+              <option value="Aprovado">Aprovado</option>
+              <option value="Banco de talentos">Banco de talentos</option>
+              <option value="Não aderente neste momento">Não aderente neste momento</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-head">
+          <div>
+            <h2>Etapa 1: Escolha simbólica</h2>
+            <p>Peça ao candidato que escolha a figura com que mais se identifica no momento.</p>
+          </div>
+        </div>
+
+        <div class="cards-choices" id="symbolChoices">
+          <button class="choice-card" data-animal="Leão">
+            <div class="emoji">🦁</div>
+            <strong>Leão</strong>
+            <span>Presença, iniciativa, dominância</span>
+          </button>
+          <button class="choice-card" data-animal="Cachorro">
+            <div class="emoji">🐶</div>
+            <strong>Cachorro</strong>
+            <span>Cooperação, lealdade, apoio</span>
+          </button>
+          <button class="choice-card" data-animal="Abelha">
+            <div class="emoji">🐝</div>
+            <strong>Abelha</strong>
+            <span>Ritmo, organização, disciplina</span>
+          </button>
+          <button class="choice-card" data-animal="Gato">
+            <div class="emoji">🐱</div>
+            <strong>Gato</strong>
+            <span>Autonomia, observação, prudência</span>
+          </button>
+        </div>
+
+        <div class="selected-box">
+          <span>Escolha atual:</span>
+          <strong id="selectedAnimal">Nenhuma</strong>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-head">
+          <div>
+            <h2>Etapa 2: Negociação</h2>
+            <p>Escolha a alternativa que mais representa a reação do candidato.</p>
+          </div>
+        </div>
+
+        <div class="stack-options" id="negotiationOptions">
+          <button class="option-card" data-group="negotiation" data-value="Escuto, organizo dados e proponho uma saída">
+            <strong>Escuto, organizo dados e proponho uma saída</strong>
+            <span>Mostra escuta ativa, estrutura e busca de consenso.</span>
+          </button>
+          <button class="option-card" data-group="negotiation" data-value="Defendo meu ponto com firmeza até convencer">
+            <strong>Defendo meu ponto com firmeza até convencer</strong>
+            <span>Mostra assertividade alta e possível rigidez.</span>
+          </button>
+          <button class="option-card" data-group="negotiation" data-value="Evito conflito e aceito a decisão do grupo">
+            <strong>Evito conflito e aceito a decisão do grupo</strong>
+            <span>Mostra adaptação, mas pode indicar baixa influência.</span>
+          </button>
+          <button class="option-card" data-group="negotiation" data-value="Peço mais contexto antes de me posicionar">
+            <strong>Peço mais contexto antes de me posicionar</strong>
+            <span>Mostra cautela, análise e prudência.</span>
+          </button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-head">
+          <div>
+            <h2>Etapa 3: Chefia e pressão</h2>
+            <p>Selecione a resposta mais próxima do comportamento observado.</p>
+          </div>
+        </div>
+
+        <div class="stack-options" id="pressureOptions">
+          <button class="option-card" data-group="pressure" data-value="Peço priorização, contexto e prazo realista">
+            <strong>Peço priorização, contexto e prazo realista</strong>
+            <span>Mostra maturidade, gestão de pressão e negociação saudável.</span>
+          </button>
+          <button class="option-card" data-group="pressure" data-value="Aceito tudo e tento resolver sozinho">
+            <strong>Aceito tudo e tento resolver sozinho</strong>
+            <span>Mostra esforço, mas pode indicar sobrecarga e baixa gestão de limites.</span>
+          </button>
+          <button class="option-card" data-group="pressure" data-value="Questiono a cobrança de forma direta">
+            <strong>Questiono a cobrança de forma direta</strong>
+            <span>Mostra enfrentamento e assertividade mais dura.</span>
+          </button>
+          <button class="option-card" data-group="pressure" data-value="Fico desconfortável e reduzo o ritmo">
+            <strong>Fico desconfortável e reduzo o ritmo</strong>
+            <span>Mostra sensibilidade maior à pressão.</span>
+          </button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-head">
+          <div>
+            <h2>Etapa 4: Notas do recrutador</h2>
+            <p>Registre sua percepção observacional durante a conversa.</p>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <label>
+            <span>Clareza de comunicação</span>
+            <input id="scoreClarity" type="range" min="0" max="100" value="70" />
+            <small id="scoreClarityValue">70</small>
+          </label>
+          <label>
+            <span>Consistência do discurso</span>
+            <input id="scoreConsistency" type="range" min="0" max="100" value="70" />
+            <small id="scoreConsistencyValue">70</small>
+          </label>
+          <label>
+            <span>Maturidade relacional</span>
+            <input id="scoreMaturity" type="range" min="0" max="100" value="70" />
+            <small id="scoreMaturityValue">70</small>
+          </label>
+          <label>
+            <span>Aderência à vaga</span>
+            <input id="scoreFit" type="range" min="0" max="100" value="70" />
+            <small id="scoreFitValue">70</small>
+          </label>
+        </div>
+
+        <label class="full">
+          <span>Observações do recrutador</span>
+          <textarea id="recruiterNotes" rows="4" placeholder="Ex.: boa escuta, fala pausada, raciocínio claro, precisa desenvolver autonomia..."></textarea>
+        </label>
+
+        <div class="actions">
+          <button id="generateBtn" class="btn-primary">Gerar leitura final</button>
+          <button id="clearBtn" class="btn-secondary">Limpar sessão</button>
+        </div>
+      </section>
+
+      <aside class="card side-panel">
+        <div class="section-head">
+          <div>
+            <h2>Painel executivo</h2>
+            <p>Resumo automático da sessão.</p>
+          </div>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric-card">
+            <span>Colaboração</span>
+            <strong id="mCollaboration">--</strong>
+          </div>
+          <div class="metric-card">
+            <span>Assertividade</span>
+            <strong id="mAssertiveness">--</strong>
+          </div>
+          <div class="metric-card">
+            <span>Pressão</span>
+            <strong id="mPressure">--</strong>
+          </div>
+          <div class="metric-card">
+            <span>Organização</span>
+            <strong id="mOrganization">--</strong>
+          </div>
+          <div class="metric-card">
+            <span>Autonomia</span>
+            <strong id="mAutonomy">--</strong>
+          </div>
+          <div class="metric-card warning">
+            <span>Risco operacional</span>
+            <strong id="mRisk">--</strong>
+          </div>
+        </div>
+
+        <div class="summary-box">
+          <h3>Classificação</h3>
+          <p><strong id="seniority">--</strong></p>
+          <p id="executiveSummary">Gere a leitura final para ver o parecer estruturado.</p>
+        </div>
+
+        <div class="summary-box">
+          <h3>Tags ATS sugeridas</h3>
+          <div id="tagsBox" class="tags-box"></div>
+        </div>
+
+        <div class="summary-box">
+          <h3>Resumo textual para copiar</h3>
+          <textarea id="copySummary" rows="16" readonly></textarea>
+          <div class="actions compact">
+            <button id="copyBtn" class="btn-secondary">Copiar resumo</button>
+            <button id="downloadBtn" class="btn-secondary">Exportar JSON</button>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
